@@ -34,6 +34,7 @@ namespace NearLondonLocationAPI.Location
                     });
             }
 
+            // possibility to extend to support other cities and/or take a coordinate as an input.
             var result = await this.userWithinDistanceCommmandHandler.Execute(new UsersWithinDistanceCommand(city, withinDistance, LondonCoordinate));
 
             if (!result.IsSuccess)
